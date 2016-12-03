@@ -4,14 +4,27 @@ class Spaceship extends Floater
  	  corners = 3;  //the number of corners, a triangular floater has 3   
 	  xCorners= new int [corners];   
 	  yCorners = new int [corners];  
-	  xCorners[0]= new int [corners];   
-	  yCorners[0] = new int [corners];  
-	  xCorners[1]= new int [corners];   
-	  yCorners[1] = new int [corners];   
-	  myColor[2] ;   
-	  myCenterX, 
-	  myCenterY; //holds center coordinates   
-	  myDirectionX,
-	  myDirectionY; //holds x and 
+	  xCorners[0]= -8;   
+	  yCorners[0] = -8;  
+	  xCorners[1]= 16;   
+	  yCorners[1] = 0;   
+	  xCorners[2]= -8;
+	  yCorners[2]=8;
+	  myColor[] 
+	  myCenterX = 0, 
+	  myCenterY=0; //holds center coordinates   
+	  myDirectionX=0;
+	  myDirectionY=0; //holds x and 
+	  myPointDirection =0;
 }
+	public void setX(int x){myCenterX= x;}
+	public void setY(int y){myCenterY=y;}
+	public int getX(){return (int)myCenterX;}
+	public int getY(){return(int)myCenterY;}
+	public void setDirectionX(double x){myDirectionX=x;}
+	public void setDirectionY(double y){myDirectionY=y;}
+	public double getDirectionX(){return (double)myDirectionX;}
+	public double getDirectionY(){return (double)myDirectionY;}
+	public void setPointDirection(int degrees){setPointDirection = degrees;}
+	public double getPointDirection(){return (double)myPointDirection;}
 }
