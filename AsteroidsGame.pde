@@ -18,11 +18,6 @@ public void setup()
     }
 }
 
-public void show()
-{
-	
-	
-}
 
 public void draw() 
 {
