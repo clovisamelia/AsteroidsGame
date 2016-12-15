@@ -12,11 +12,13 @@ public void setup()
     {
       star[i] = new Stars();
     }
-    for(int i = 0; i < 40; i++)
+    for(int i = 0; i < 30; i++)
     {
       asteroids.add(new Asteroid());
     }
 }
+
+
 
 public void draw() 
 {
@@ -28,8 +30,9 @@ public void draw()
 
   for(int i = 0; i < asteroids.size(); i++)
   {
-    asteroids.get(i).show();
+
     asteroids.get(i).move();
+    asteroids.get(i).show();
   }
 
 
@@ -42,7 +45,7 @@ public void draw()
   {
     for (int k = 0; k < asteroids.size(); k++)
     {
-      if(dist(shoot.get(i).getX(), shoot.get(i).getY(), asteroids.get(k).getX(), asteroids.get(k).getY()) < 20)
+      if(dist(shoot.get(i).getX(), shoot.get(i).getY(), asteroids.get(k).getX(), asteroids.get(k).getY()) < 25)
         asteroids.remove(k);
     }
   }
@@ -74,8 +77,8 @@ public void keyPressed()
   }
   if (keyCode == 13)
   {
-    ufo.setX((int)(Math.random()*800));
-    ufo.setY((int)(Math.random()*800));
+    ufo.setX((int)(Math.random()*500));
+    ufo.setY((int)(Math.random()*500));
     ufo.setDirectionX(0);
     ufo.setDirectionY(0);
     ufo.setPointDirection((int)(Math.random()*360));
